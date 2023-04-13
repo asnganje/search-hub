@@ -1,2 +1,8 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<h1>Articles Search Box</h1>
+
+<%= form_tag articles_path, method: :get, remote: true do %>
+  <%= text_field_tag :search, nil, placeholder: "Search articles..." %>
+<% end %>
+
+<div id="search-results"></div>
+
